@@ -57,6 +57,9 @@ body{font-family:'Archivo',system-ui,sans-serif;background:#f2efe9;color:#15151a
 a{transition:color .15s}
 nav{background:#15151a;padding:16px max(24px,calc(50vw - 480px));display:flex;gap:26px;flex-wrap:wrap;position:sticky;top:0;z-index:5}
 nav a{color:#fff;text-decoration:none;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:1px}nav a:hover{color:#f4c542}
+.lang{margin-left:auto;display:flex;gap:0;border:2px solid #f4c542}
+.lang button{background:none;border:none;color:#fff;font-family:inherit;font-weight:700;font-size:13px;letter-spacing:1px;padding:3px 10px;cursor:pointer}
+.lang button.on{background:#f4c542;color:#15151a}.lang button:hover:not(.on){color:#f4c542}
 .hero{background:#d23c2e;color:#fff;display:flex;gap:44px;align-items:center;flex-wrap:wrap}
 .hero h1{font-size:clamp(50px,8.5vw,100px);font-weight:900;letter-spacing:-3px;line-height:.92;margin-bottom:22px}
 .hero .lead{font-size:22px;max-width:560px;font-weight:600}
@@ -101,7 +104,7 @@ h2{font-size:38px;font-weight:900;letter-spacing:-1px;margin-bottom:30px;text-tr
 footer{background:#15151a;color:#888;padding:0 max(24px,calc(50vw - 480px)) 36px;display:flex;gap:24px;font-size:14px}
 footer a{color:#888;text-decoration:none}footer a:hover{color:#f4c542}
 </style></head><body>
-<nav><a href="#writing">Writing</a><a href="#speaking">Speaking</a><a href="#newsletter">Newsletter</a><a href="#press">Press</a><a href="#contact">Contact</a></nav>
+<nav><a href="#writing">Writing</a><a href="#speaking">Speaking</a><a href="#newsletter">Newsletter</a><a href="#press">Press</a><a href="#contact">Contact</a><span class="lang"><button data-lang="en" class="on">EN</button><button data-lang="zh">中文</button><button data-lang="fr">FR</button></span></nav>
 <div class="block hero">
   <div><h1>FERGUS<br>RYAN</h1>
   <p class="lead">I investigate how the Chinese Communist Party uses technology, platforms, censorship, and propaganda to shape what people see and believe.</p>
@@ -159,4 +162,105 @@ footer a{color:#888;text-decoration:none}footer a:hover{color:#f4c542}
 </div>
 <div class="topics"><div class="clabel">Available for comment on</div><p>Chinese AI governance · CCP propaganda and influence operations · TikTok and WeChat · Foreign influencers and the CCP · Platform censorship · Digital authoritarianism · Xinjiang and surveillance technology · Australia-China relations</p></div></div>
 <footer><span>© 2026 Fergus Ryan</span><a href="https://redpacket.substack.com" target="_blank" rel="noopener">Red Packet Newsletter</a></footer>
+<script>
+(function(){
+var T={
+zh:{
+ nav:["文章","演讲","通讯","媒体报道","联系"],
+ lead:"我研究中国共产党如何利用技术、平台、审查与宣传，塑造人们的所见与所信。",
+ bio:"澳大利亚战略政策研究所（ASPI）网络、技术与安全项目高级分析师。研究方向：中共信息战略、宣传与影响力行动、人工智能治理、社交平台与内容审核。曾在中国生活和工作，研究依托中文一手资料。",
+ h2:["精选文章","演讲","Red Packet（红包）","媒体报道","联系方式"],
+ cards:[
+  "全球对“AI安全”的定义存在根本分歧：民主国家强调减少危害与问责；中国则将“AI安全”定义为对党安全——并正在向全世界输出这一模式。",
+  "当为我们提供安全保障的盟友不再可靠地与我们共享价值观时，澳大利亚的战略应当是什么样子。",
+  "北京押注：全国统筹的算力、开放权重模型和庞大的部署规模，能够超越美国在前沿能力上的领先。",
+  "中国的人工智能系统如何扩展党的控制能力——以及这对中国内外人权意味着什么。",
+  "中国对AI驱动的影响与说服工具的开发，及其对民主社会的战略影响。",
+  "外国网红如何被招募并部署为中共全球宣传的工具——及其对全球平台治理的影响。",
+  "中国两大平台如何让北京得以在中国境外塑造——并审查——信息环境。",
+  "对中国AI与监控企业、其全球布局及其与国家安全机构关系的深度梳理。",
+  "最早系统性运用开源情报调查新疆大规模拘押体系规模与地理分布的研究之一。",
+  "国会山骚乱后，极右翼平台撤离美国基础设施——却在中俄服务器上找到了落脚点。",
+  "MrBeast经由B站进入中国——以及这揭示了威权平台如何吸纳西方内容。",
+  "回应TikTok的“排外”话术——并论证为何需要针对国家控制应用的专门立法。"],
+ more:"更多文章见 THE STRATEGIST →",
+ vcap:"奥斯陆自由论坛，2026 · <a href='https://www.youtube.com/watch?v=2N7NGM5UqDY&t=3s' target='_blank' rel='noopener'>在YouTube观看 →</a>",
+ slabel:["演讲者简介","演讲主题"],
+ sbio:"Fergus Ryan是澳大利亚战略政策研究所（ASPI）网络、技术与安全项目高级分析师，专注于中共宣传、人工智能治理、平台审查与信息行动。他曾在中国生活和工作，研究依托中文一手资料。其研究成果曾为澳大利亚、美国和欧洲的政策辩论提供参考。",
+ topics:["威权AI：中国的人工智能如何为控制而生","中共的外国网红机器","中国平台与全球信息控制","AI驱动的说服与民主韧性","新疆、监控与中共技术的全球扩散"],
+ newsp:"中国、审查、监控与宣传——写给那些想真正理解北京在做什么、而不只是被动反应的人。",
+ start:"从这里开始",
+ btn:"免费订阅 →",
+ press:["中国追踪外国人的监控数据库","TikTok、国家安全与监管行动的理由","MrBeast、注意力经济与中国的开放","TikTok算法风险与内容审查","中国科技整顿与监管触角的边界","TikTok与微信对澳大利亚的国家安全风险"],
+ clabel:["电子邮件","Bluesky","领英","ASPI","X","Threads","Signal","匿名爆料","可就以下议题接受采访"],
+ topicsp:"中国AI治理 · 中共宣传与影响力行动 · TikTok与微信 · 外国网红与中共 · 平台审查 · 数字威权主义 · 新疆与监控技术 · 澳中关系"
+},
+fr:{
+ nav:["Écrits","Conférences","Newsletter","Presse","Contact"],
+ lead:"J'enquête sur la manière dont le Parti communiste chinois utilise la technologie, les plateformes, la censure et la propagande pour façonner ce que les gens voient et croient.",
+ bio:"Analyste principal au programme Cyber, technologie et sécurité de l'Australian Strategic Policy Institute (ASPI). Domaines de recherche : stratégie informationnelle du PCC, propagande et opérations d'influence, gouvernance de l'IA, plateformes sociales et modération des contenus. A vécu et travaillé en Chine ; mène ses recherches à partir de sources en langue chinoise.",
+ h2:["Écrits choisis","Conférences","Red Packet","Dans la presse","Contact"],
+ cards:[
+  "Un clivage fondamental dans la définition de la sécurité de l'IA : les démocraties privilégient la réduction des risques et la responsabilité ; la Chine définit une « IA sûre » comme une IA sûre pour le Parti — et exporte activement ce modèle dans le monde entier.",
+  "À quoi ressemble la stratégie australienne lorsque l'allié qui garantit notre sécurité ne partage plus fiablement nos valeurs.",
+  "Le pari de Pékin : une puissance de calcul coordonnée à l'échelle nationale, des modèles à poids ouverts et un déploiement massif peuvent dépasser l'avance américaine en capacités de pointe.",
+  "Comment les systèmes d'IA chinois étendent la capacité de contrôle du Parti — et ce que cela signifie pour les droits humains en Chine et au-delà.",
+  "Le développement par la Chine d'outils d'influence et de persuasion fondés sur l'IA, et leurs implications stratégiques pour les sociétés démocratiques.",
+  "Comment des influenceurs étrangers sont recrutés et déployés comme instruments de la propagande mondiale du PCC — avec des implications pour la gouvernance des plateformes.",
+  "Comment deux des plus grandes plateformes chinoises permettent à Pékin de façonner — et de censurer — les environnements informationnels au-delà des frontières chinoises.",
+  "Une cartographie approfondie des entreprises chinoises d'IA et de surveillance, de leur empreinte mondiale et de leurs liens avec l'appareil de sécurité de l'État.",
+  "L'une des premières enquêtes systématiques en sources ouvertes sur l'ampleur et la géographie du système de détention de masse au Xinjiang.",
+  "Après l'assaut du Capitole, les plateformes d'extrême droite ont fui les infrastructures américaines — et trouvé refuge sur des serveurs chinois et russes.",
+  "L'arrivée de MrBeast en Chine via Bilibili — et ce qu'elle révèle de la façon dont les plateformes autoritaires absorbent les contenus occidentaux.",
+  "Une réponse à l'accusation de « xénophobie » brandie par TikTok — et un plaidoyer pour une législation spécifique aux applications contrôlées par un État."],
+ more:"PLUS SUR THE STRATEGIST →",
+ vcap:"Oslo Freedom Forum, 2026 · <a href='https://www.youtube.com/watch?v=2N7NGM5UqDY&t=3s' target='_blank' rel='noopener'>Voir sur YouTube →</a>",
+ slabel:["Biographie","Sujets de conférence"],
+ sbio:"Fergus Ryan est analyste principal au programme Cyber, technologie et sécurité de l'ASPI, spécialiste de la propagande du PCC, de la gouvernance de l'IA, de la censure des plateformes et des opérations informationnelles. Il a vécu et travaillé en Chine et mène ses recherches à partir de sources en langue chinoise. Ses travaux ont nourri les débats politiques en Australie, aux États-Unis et en Europe.",
+ topics:["L'IA autoritaire : comment l'IA chinoise est conçue pour le contrôle","La machine à influenceurs étrangers du PCC","Les plateformes chinoises et le contrôle mondial de l'information","Persuasion par l'IA et résilience démocratique","Xinjiang, surveillance et diffusion mondiale des technologies du PCC"],
+ newsp:"Chine, censure, surveillance et propagande — pour ceux qui veulent comprendre ce que fait réellement Pékin, plutôt que d'y réagir.",
+ start:"Par où commencer",
+ btn:"S'ABONNER GRATUITEMENT →",
+ press:["Le tableau de bord chinois de surveillance des étrangers","TikTok, sécurité nationale et nécessité d'une action réglementaire","MrBeast, l'économie de l'attention et l'ouverture chinoise","Risques algorithmiques et censure des contenus sur TikTok","La reprise en main de la tech chinoise et les limites du régulateur","TikTok et WeChat : risques pour la sécurité nationale australienne"],
+ clabel:["E-mail","Bluesky","LinkedIn","ASPI","X","Threads","Signal","Signalements anonymes","Disponible pour commenter"],
+ topicsp:"Gouvernance de l'IA chinoise · Propagande et opérations d'influence du PCC · TikTok et WeChat · Influenceurs étrangers et PCC · Censure des plateformes · Autoritarisme numérique · Xinjiang et technologies de surveillance · Relations Australie-Chine"
+}};
+function sel(){return {
+ nav:document.querySelectorAll("nav a[href^='#']"),
+ lead:document.querySelectorAll(".lead"),
+ bio:document.querySelectorAll(".hero .bio"),
+ h2:document.querySelectorAll(".block h2"),
+ cards:document.querySelectorAll(".card p"),
+ more:document.querySelectorAll(".more"),
+ vcap:document.querySelectorAll(".vcap"),
+ slabel:document.querySelectorAll(".slabel"),
+ sbio:document.querySelectorAll(".speakgrid > div:first-child p"),
+ topics:document.querySelectorAll(".speakgrid li"),
+ newsp:document.querySelectorAll(".news .body > p"),
+ start:document.querySelectorAll(".start"),
+ btn:document.querySelectorAll(".btn"),
+ press:document.querySelectorAll(".pd"),
+ clabel:document.querySelectorAll(".clabel"),
+ topicsp:document.querySelectorAll(".topics p")
+};}
+var S=sel(),EN={};
+Object.keys(S).forEach(function(k){EN[k]=Array.prototype.map.call(S[k],function(n){return n.innerHTML;});});
+function apply(lang){
+ Object.keys(S).forEach(function(k){
+  Array.prototype.forEach.call(S[k],function(n,i){
+   var v;
+   if(lang==="en"){v=EN[k][i];}
+   else{var e=T[lang][k];v=Array.isArray(e)?e[i]:(i===0?e:null);}
+   if(v!=null){n.innerHTML=v;}
+  });
+ });
+ document.documentElement.lang=lang==="zh"?"zh-Hans":lang;
+ document.querySelectorAll(".lang button").forEach(function(b){b.classList.toggle("on",b.dataset.lang===lang);});
+ try{localStorage.setItem("lang",lang);}catch(e){}
+}
+document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){apply(b.dataset.lang);});});
+var saved=null;try{saved=localStorage.getItem("lang");}catch(e){}
+if(saved&&saved!=="en"&&T[saved]){apply(saved);}
+})();
+</script>
 </body></html>
