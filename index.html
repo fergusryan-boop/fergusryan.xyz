@@ -58,8 +58,9 @@ a{transition:color .15s}
 nav{background:#15151a;padding:16px max(24px,calc(50vw - 480px));display:flex;gap:26px;flex-wrap:wrap;position:sticky;top:0;z-index:5}
 nav a{color:#fff;text-decoration:none;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:1px}nav a:hover{color:#f4c542}
 .lang{margin-left:auto;display:flex;gap:0;border:2px solid #f4c542}
-.lang button{background:none;border:none;color:#fff;font-family:inherit;font-weight:700;font-size:13px;letter-spacing:1px;padding:3px 10px;cursor:pointer}
-.lang button.on{background:#f4c542;color:#15151a}.lang button:hover:not(.on){color:#f4c542}
+.lang button,.lang a{background:none;border:none;color:#fff;font-family:inherit;font-weight:700;font-size:13px;letter-spacing:1px;padding:3px 10px;cursor:pointer;text-decoration:none;display:flex;align-items:center}
+.lang button.on{background:#f4c542;color:#15151a}.lang button:hover:not(.on),.lang a:hover{color:#f4c542}
+.lang a.ailang{border-left:2px solid rgba(244,197,66,.45)}
 .hero{background:#d23c2e;color:#fff;display:flex;gap:44px;align-items:center;flex-wrap:wrap}
 .hero h1{font-size:clamp(50px,8.5vw,100px);font-weight:900;letter-spacing:-3px;line-height:.92;margin-bottom:22px}
 .hero .lead{font-size:22px;max-width:560px;font-weight:600}
@@ -104,7 +105,7 @@ h2{font-size:38px;font-weight:900;letter-spacing:-1px;margin-bottom:30px;text-tr
 footer{background:#15151a;color:#888;padding:0 max(24px,calc(50vw - 480px)) 36px;display:flex;gap:24px;font-size:14px}
 footer a{color:#888;text-decoration:none}footer a:hover{color:#f4c542}
 </style></head><body>
-<nav><a href="#writing">Writing</a><a href="#speaking">Speaking</a><a href="#newsletter">Newsletter</a><a href="#press">Press</a><a href="#contact">Contact</a><span class="lang"><button data-lang="en" class="on">EN</button><button data-lang="zh">中文</button><button data-lang="fr">FR</button></span></nav>
+<nav><a href="#writing">Writing</a><a href="#speaking">Speaking</a><a href="#newsletter">Newsletter</a><a href="#press">Press</a><a href="#contact">Contact</a><span class="lang"><button data-lang="en" class="on">EN</button><button data-lang="zh">中文</button><button data-lang="fr">FR</button><a class="ailang" href="for-ai/" title="A page written for AI to read">AI</a></span></nav>
 <div class="block hero">
   <div><h1>FERGUS<br>RYAN</h1>
   <p class="lead">I investigate how the Chinese Communist Party uses technology, platforms, censorship, and propaganda to shape what people see and believe.</p>
