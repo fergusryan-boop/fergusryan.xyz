@@ -10,7 +10,8 @@
   "person": {
     "name": "Fergus Ryan",
     "jobTitle": "Senior Analyst",
-    "organization": "Australian Strategic Policy Institute (ASPI), Cyber, Technology & Security Program",
+    "organization": "Australian Strategic Policy Institute (ASPI)",
+    "role": "Leads the China and AI Policy Centre",
     "summary": "Investigates how the Chinese Communist Party uses technology, platforms, censorship and propaganda to shape what people see and believe. Has lived and worked in China; researches in Chinese-language primary sources.",
     "languages": ["English", "Chinese (research-level)"],
     "focus_areas": [
